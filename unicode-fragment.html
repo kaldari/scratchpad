@@ -5,7 +5,6 @@
 	<style>
 		h2:target:after { color: red; content: " ← selected"; }
 		h2.js:after { color: red; content: " ← JS"; }
-		li.gap { margin-bottom: 0.5em; }
 		.small { font-size: 90%; }
 		h2 small { font-size: 65%; font-weight: normal; color: grey; }
 		table { border-collapse: collapse; }
@@ -28,20 +27,16 @@
 </head>
 <body>
 	<ol>
-		<li><a href="#बादल">#बादल</a>
-		<li class="gap"><a href="#%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2">#%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2</a>
-		<li><a href="#Санкт-Петербург">#Санкт-Петербург</a>
-		<li class="gap"><a href="#%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3">#%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3</a></li>
-		<li><a href="#😀😀😀">#😀😀😀</a></li>
+		<li><a href="#%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2">#%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2</a>
+		<li><a href="#%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3">#%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3</a></li>
 		<li><a href="#%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80">#%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80</a></li>
 	</ol>
 
 	<hr>
 
 	<h2 id="बादल">1. id="बादल"</h2>
-	<h2 id="%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2">2. id="%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2" <small>(बादल)</small></h2>
-	<h2 id="Санкт-Петербург">3. id="Санкт-Петербург"</h2>
-	<h2 id="%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80">4. id="%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80" <small>(😀😀😀)</small></h2>
+	<h2 id="Санкт-Петербург">2. id="Санкт-Петербург"</h2>
+	<h2 id="😀😀😀">3. id="😀😀😀"</h2>
 
 	<hr>
 
@@ -50,60 +45,7 @@
 		Value of <code>document.getElementById(location.hash.substr(1))</code>: <span id="js-element">-</span>
 	</p>
 
-	<hr>
-
-	<table>
-		<caption>Tested with: Chrome 55 / Ubuntu, Firefox 50 / Ubuntu, Chrome 55 / Mac OS, Firefox 50 / Mac OS, Opera 42 / Mac OS, Safari 10 / Mac OS</caption>
-		<tr>
-			<td>Selected entry
-			<td>1
-			<td>2
-			<td>3
-			<td>4
-			<td>5
-			<td>6
-		<tr>
-			<td>Expected anchor (per WHATWG URI <a href="https://url.spec.whatwg.org/#fragment-state">4.2</a> and <a href="https://html.spec.whatwg.org/#the-indicated-part-of-the-document">7.8.9</a>)
-			<td>1
-			<td>1
-			<td>3
-			<td>3
-			<td>-
-			<td>-
-		<tr>
-			<td>Chrome
-			<td>1
-			<td class="wrong">2
-			<td>3
-			<td>3
-			<td>-
-			<td class="wrong">4
-		<tr>
-			<td>Firefox
-			<td>1
-			<td>1
-			<td>3
-			<td>3
-			<td>-
-			<td>-
-		<tr>
-			<td>Opera
-			<td>1
-			<td class="wrong">2
-			<td>3
-			<td>3
-			<td>-
-			<td class="wrong">4
-		<tr>
-			<td>Safari
-			<td class="wrong">2
-			<td class="wrong">2
-			<td>3
-			<td>3
-			<td class="wrong">4
-			<td class="wrong">4
-	</table>
-	<p class="small"><a href="https://github.com/tgr/scratchpad/blob/master/unicode-fragment.html">repo</a></p>
+	<p class="small"><a href="https://github.com/kaldari/scratchpad/blob/master/unicode-fragment.html">repo</a></p>
 </body>
 </html>
 
