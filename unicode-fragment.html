@@ -3,8 +3,8 @@
 <head>
 	<title>Unicode fragment handling test</title>
 	<style>
-		h2:target:after { color: red; content: " ← selected"; }
-		h2.js:after { color: red; content: " ← JS"; }
+		h2:target:after { color: red; content: " ← selected"; font-size: 90%; }
+		h2.js:after { color: red; content: " ← JS"; font-size: 90%; }
 		.small { font-size: 90%; }
 		h2 small { font-size: 65%; font-weight: normal; color: grey; }
 		table { border-collapse: collapse; }
@@ -37,13 +37,6 @@
 	<h2 id="बादल">1. id="बादल"</h2>
 	<h2 id="Санкт-Петербург">2. id="Санкт-Петербург"</h2>
 	<h2 id="😀😀😀">3. id="😀😀😀"</h2>
-
-	<hr>
-
-	<p>
-		Value of <code>location.hash</code>: <span id="js-hash"></span><br>
-		Value of <code>document.getElementById(location.hash.substr(1))</code>: <span id="js-element">-</span>
-	</p>
 
 	<p class="small"><a href="https://github.com/kaldari/scratchpad/blob/master/unicode-fragment.html">repo</a></p>
 </body>
