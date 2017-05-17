@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h2:target:after {
+    border: solid 1px;
+    content: " Target selector works!";
+}
+h2:target {
+    border: solid red 1px;
+}
+</style>
+</head>
+<body>
+
+<ol>
+<li><a href="#a">ASCII</a></li>
+<li><a href="#%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80">Unicode</a></li>
+</ol>
+<div style="height: 1000px;"></div>
+<h2 id="a">ASCII link works!</h2>
+<div style="height: 1000px;"></div>
+<h2 id="😀😀😀">Unicode link works!</h2>
+<div style="height: 1000px;"></div>
+
+</body>
+</html>
